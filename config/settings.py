@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql',
-         'NAME': 'agenda',
-         'USER': 'root',
-         'PASSWORD': 'xeubK8BPphUE',
-         'HOST': '18.228.236.239',
-         'PORT': '3306',
+         'NAME': '',
+         'USER': '',
+         'PASSWORD': '',
+         'HOST': '
+         'PORT': '',
      }
 }
 
