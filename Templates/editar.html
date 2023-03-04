@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário de Edição</title>
+	<style>
+		form {
+			margin: auto;
+			width: 50%;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+		}
+		input, textarea {
+			margin: 10px 0;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ddd;
+			font-size: 16px;
+			width: 100%;
+		}
+		label {
+			display: block;
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<form action="{% url 'atualiza' agendaDados.id %}" enctype="multipart/form-data" method="POST">{% csrf_token %}
+		<label for="data">Data:</label>
+		<input type="date" id="data" value="{{agendaDados.data}}" name="data">
+
+		<label for="horaInicio">Hora de Início:</label>
+		<input type="time" id="horaInicio" value="{{agendaDados.horaDeInicio}}" name="horaInicio">
+
+		<label for="horaTermino">Hora de Término:</label>
+		<input type="time" id="horaTermino" value="{{agendaDados.horaDeTermino}}" name="horaTermino">
+
+		<label for="descricao">Descrição:</label>
+		<input id="descricao" value="{{agendaDados.descrição}}" name="descricao"></input>
+
+		<label for="duracao">Duração:</label>
+		<input type="time" id="duracao" value="{{agendaDados.duração}}" name="duracao">
+
+		<input type="submit" value="Salvar">
+	</form>
+</body>
+</html>
